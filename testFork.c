@@ -9,7 +9,7 @@
 #include  <stdio.h>
 #include  <sys/types.h>
 
-#define   MAX_COUNT  200
+#define   MAX_COUNT  300
 
 void  ChildProcess(void);                /* child process prototype  */
 void  ParentProcess(void);               /* parent process prototype */
@@ -34,6 +34,7 @@ void  ChildProcess(void)
     for (i = 1; i <= MAX_COUNT; i++)
         printf("   This line is from child, value = %d\n", i);
     printf("   *** Child process is done ***\n");
+    printf("End of child process");
 }
 
 void  ParentProcess(void)
@@ -42,5 +43,5 @@ void  ParentProcess(void)
     
     for (i = 1; i <= MAX_COUNT; i++)
         printf("This line is from parent, value = %d\n", i);
-    printf("*** Parent is done ***\n");
+    printf("End of parent process");
 }
